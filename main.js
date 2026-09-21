@@ -3,7 +3,7 @@ class TicTacToe {
         this.boardElement = board;
         this.status = status;
         this.reset = reset;
-        this.board = Array(9).fill(null);
+        this.board = board;
         this.currentPlayer = 'X';
         this.isGameOver = false;
         this.winningCombinations = [
@@ -12,6 +12,8 @@ class TicTacToe {
             [0, 4, 8], [2, 4, 6]
         ];
         this.buildGrid();
+
+        this.reset.addEventListener('click' , (event) => {this.resetGame()})
     }
 
     buildGrid() {
@@ -23,6 +25,7 @@ class TicTacToe {
             cell.addEventListener('click', (event) => this.handleCellClick(event));
             this.boardElement.appendChild(cell);
         }
+        this.board = Array(9).fill(null);
     }
 
     handleCellClick({ target }) {
@@ -62,7 +65,17 @@ class TicTacToe {
         this.status.innerText = message;
         this.isGameOver = true;
     }
+
+    resetGame(){
+        for (let i = 0; i < 9; i++){
+            console.log(this.board[i]);
+            this.board[i] = '8'
+        }
+        this.board = Array(9).fill(null);
+        console.log("im resetting the game")
+    }
 }
+
 
 new TicTacToe(
     document.getElementById('game'),
