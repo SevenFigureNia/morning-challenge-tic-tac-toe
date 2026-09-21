@@ -14,9 +14,6 @@
   - (1 to 5 no 3) I feel good about my code
   - Anything specific on which you want feedback!
 
-Example:
-```
-I completed the challenge: 5
+I completed the challenge: 4
 I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+i was stuck and getting frustrated with the rest button. its not restting the game/clearing it and i feel like i've been fixing the wrong things. the code's i keep getting are null but i put properties and values in place, having trouble undstanding my mistake
